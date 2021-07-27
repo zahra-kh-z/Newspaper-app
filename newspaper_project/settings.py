@@ -50,7 +50,16 @@ INSTALLED_APPS = [
 TIME_ZONE = 'Asia/Tehran'  # new
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 AUTH_USER_MODEL = 'users.CustomUser'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'zahra.kh2005@gmail.com'
+EMAIL_HOST_PASSWORD = 'tmswnsqtnotgtact'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
